@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> box background </title>
+        <style>
+        body {
+            background-color: grey;
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+            background: red;
+            border: 1px solid black;
+            float: left;
+            margin: 10px;
+        }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="box" style='background: red ;'></div>
+        <div class="box" style='background: blue;'></div>
+        <div class="box" style='background: #333;'></div>
+        <div class="box" style='background: #999000;'></div>
+        <div class="box" style='background: #867577;'></div>
+        <div class="box" style='background: #110000;'></div>
+        
+        <script>
+        var divCol = document.querySelectorAll('.box');
+        // console.log('div - ', divCol);
+            for ( var i = 0; i< divCol.length; i++) {
+                divCol[i].addEventListener('click', function() {
+                   document.body.style.background = this.style.background; 
+                });
+            }
+        </script>
+    </body>
+</html>
